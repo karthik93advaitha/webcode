@@ -53,7 +53,7 @@ app.get('/about', (req,res) => {
 
 app.get('/help', (req,res)=>{
   res.render('help.hbs',{
-    pageTitle: 'Help Page',
+    pageTitle: 'Help Page'
 
   });
 });
@@ -63,6 +63,12 @@ app.get('/bad', (req,res)=>{
   res.send({
     ErrorMessage: 'could not get the data',
     Status: 404
+  });
+});
+
+app.get('/projects', (req,res)=>{
+  res.render('projects.hbs',{
+    pageTitle: 'Project Page'
   });
 });
 
